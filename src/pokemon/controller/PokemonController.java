@@ -37,6 +37,7 @@ public class PokemonController {
 				if(po[i].getName().contains(name)) {
 					System.out.println(po[i]);
 					j++;
+					break;
 				}
 			}else {
 				if(j == 0) {
@@ -46,6 +47,42 @@ public class PokemonController {
 					break;
 				}
 			}
+		}
+	}
+	public void numSearch(int num) {
+
+		for (int i = 0; i < po.length; i++) {
+			if(po[i] != null) {
+				if(i == num) {
+					System.out.println(po[i-1]);
+					
+					
+				}
+			}else {
+				System.out.println(num +"번에 해당하는 포켓몬이 없습니다.");
+				break;
+			}
+			break;
+		}
+	}
+	public void fmSearch(String formal) {
+		
+		int j = 0;
+		
+		for(int i = 0; i < po.length; i++) {
+			if(po[i] != null) {
+				if(po[i].getFormal().contains(formal)){
+					System.out.println(po[i]);
+					j++;
+					
+				}
+			}if(j == 0) {
+				System.out.println(formal +"에 해당하는 포켓몬이 없습니다.");
+				break;
+				}else {
+					break;
+				}
+			
 		}
 	}
 	

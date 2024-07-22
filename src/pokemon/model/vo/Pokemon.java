@@ -26,8 +26,8 @@ public class Pokemon {
 	
 	@Override
 	public String toString() {
-		return "Pokemon정보 [NO." + dNum + ", 이름=" + name + ", 타입=" + formal + ", 평균 키=" + height + ", 분류="
-				+ group + ", 평균 몸무게=" + weight + ", 성별=" + gender + "]";
+		return "Pokemon정보 NO." + dNum + ", 이름=" + name + ", 타입=" + formal + ", 평균 키=" + height + ", 분류="
+				+ group + ", 평균 몸무게=" + weight + ", 성별=" + gender ;
 	}
 
 	public int getDNum() {

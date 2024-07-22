@@ -25,6 +25,8 @@ public class PokemonMenu {
 			System.out.println("3. 속성으로 검색");
 			System.out.println("4. 한번에 보기");
 			System.out.println("5. 포켓몬 등록");
+			System.out.println("6. 포켓몬 삭제");
+			System.out.println("7. 오늘의 포켓몬");
 			System.out.println("메뉴번호 : ");
 			
 			int menu = sc.nextInt();
@@ -35,19 +37,22 @@ public class PokemonMenu {
 				nameSearch();
 				break;
 			case 2:
-				numMenu();
+				numSearch();
 				break;
 			case 3:
-				fmMenu();
+				fmSearch();
 				break;
 			case 4:
-				allMenu();
+				allSearch();
 				break;
 			case 5:
-				registerMenu();
+				registerSearch();
 				break;
 			case 6:
 				deleteMenu();
+				break;
+			case 7: 
+				randomPokemon();
 				break;
 			case 0:
 				System.out.println("프로그램을 종료합니다.");
@@ -66,19 +71,31 @@ public class PokemonMenu {
 		pcr.nameSearch(name);
 				
 	}
-	public void numMenu() {
+	public void numSearch() {
+		
+		System.out.print("검색할 포켓몬 번호 : ");
+		int num = sc.nextInt();
+		
+		pcr.numSearch(num);
 		
 	}
-	public void fmMenu() {
+	public void fmSearch() {
+		System.out.print("검색할 포켓몬 속성 : ");
+		String formal = sc.nextLine();
+		
+		pcr.nameSearch(formal);
 		
 	}
-	public void allMenu() {
+	public void allSearch() {
 		
 	}
-	public void registerMenu() {
+	public void registerSearch() {
 		
 	}
 	public void deleteMenu() {
+		
+	}
+	public void randomPokemon() {
 		
 	}
 	
